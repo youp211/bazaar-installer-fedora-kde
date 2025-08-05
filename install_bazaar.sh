@@ -69,6 +69,7 @@ sudo dnf install -y \
     libappindicator-gtk3-devel \
     librsvg2-devel \
     curl \
+    libdex \
     wget
 
 # --- Step 3: Clone the Bazaar Repository ---
