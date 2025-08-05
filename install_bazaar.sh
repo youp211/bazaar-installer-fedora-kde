@@ -105,16 +105,8 @@ echo "--> Cloning the KRunner plugin repository..."
 git clone https://github.com/ublue-os/krunner-bazaar.git "$HOME/krunner-bazaar"
 cd "$HOME/krunner-bazaar"
 
-echo "--> Configuring KRunner plugin with CMake..."
-mkdir -p build
-cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
-
-echo "--> Compiling KRunner plugin..."
-make
-
-echo "--> Installing KRunner plugin (sudo required)..."
-sudo make install
+echo "--> Configuring KRunner plugin with just..."
+sudo just rpm
 
 # --- Step 6: Finalizing ---
 echo -e "\n\e[1m\e[32m[6/6] Finalizing installation...\e[0m"
